@@ -1,44 +1,31 @@
-@import './../../../assets/_mixins';
-@import './../../../assets/_variables';
 
+@import './../../assets/_mixins';
 // Component styles
 header {
   mat-toolbar {
-    background: $theme-surface;
-    height: 89px;
-    padding-left: 100px;
-    padding-right: 100px;
+    background: $primary-color;
 
     .logo img {
-      background-image: url('./../../../assets/logoColored.svg'); // Update path accordingly
-      width: 184px;
-      height: 33px;
-      background-size: contain;
-      background-repeat: no-repeat;
+    height: 50px; // Set the height according to your design
     }
-
     .spacer {
       flex: 1 1 auto;
     }
-
-        .actions {
-      display: flex;
+  
+    .actions {
+    // Align icons
+    display: flex;
       align-items: center;
-
-      @media (min-width: breakpoint('desktop')) {
-          display: block;
-        }
-      
-        @media (max-width: breakpoint('mobile')) {
-          display: none;
-        }
-      button {
-        margin-left: 16px;
+    button {
+      margin-left: 16px; // Space between buttons
       }
-    }
-  }
+      }
+}
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+// Responsive design using mixins
+@include respond-to('small') {
+  .navigation {
+    display: none; // Hide navigation on small screens
+  
 }
