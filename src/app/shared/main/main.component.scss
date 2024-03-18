@@ -1,11 +1,83 @@
 
-@import './../../assets/_mixins';
+@import './../../../assets/_mixins';
 
-main {
-  section {
-    padding: 2rem;
-    @include respond-to('mobile') {
-      padding: 1rem;
+.consent-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border-top: 1px solid #cccccc;
+
+  .consent-checkbox {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    label {
+      font-size: 0.875rem;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .consent-action {
+    button.start-questionnaire {
+      background-color: #9c27b0; // Example purple color
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: darken(#9c27b0, 10%);
+      }
+    }
+  }
+
+  .consent-info {
+    font-size: 0.875rem;
+    max-width: 50%; // Limit the width to make the text more readable
+
+    p {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Responsive adjustments for smaller screens
+@include respond-to('mobile') {
+  .consent-container {
+      flex-direction: column;
+      align-items: stretch;
+  
+      .consent-action {
+        margin-top: 1rem;
+  
+        button.start-questionnaire {
+          width: 100%;
+        }
+      }
+  
+      .consent-info {
+        max-width: 100%;
+        margin-top: 1rem;
     }
   }
 }
