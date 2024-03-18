@@ -23,11 +23,12 @@ app-main {
  
 app-main {
   width: 100%;
-  max-width: 1200px; 
   margin: 0 auto;
-  padding: 20px;
   box-sizing: border-box;
   
+  @include respond-to('desktop') {
+      padding: 40px;
+    }
   @include respond-to('mobile') {
     padding: 10px;
   }

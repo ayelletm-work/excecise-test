@@ -1,12 +1,13 @@
 <div class="consent-container">
-    <div class="consent-checkbox">
-        <mat-checkbox color="primary" class="example-margin">
+    <div class="consent-form">
+        <mat-checkbox class="custom-checkbox" color="primary">
             By checking this box, I confirm that I have read and acknowledged the <a
                 href="your-link-to-privacy-policy">Privacy Notice</a> of Carebox.
         </mat-checkbox>
-    </div>
-    <div class="consent-action">
-        <button type="button" class="start-questionnaire">Start questionnaire</button>
+        <button mat-button class="consent-button">
+            Start questionnaire
+            <mat-icon class="consent-button-icon"> chevron_right </mat-icon>
+        </button>
     </div>
     <div class="consent-info">
         <p>Please note: Select the Location & Language, on the upper-right of the Carebox Privacy Policy page in the
