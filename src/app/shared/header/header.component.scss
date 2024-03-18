@@ -1,0 +1,45 @@
+@import './../../../assets/_mixins';
+@import './../../../assets/_variables';
+
+// Component styles
+header {
+  mat-toolbar {
+    background: $theme-surface;
+    height: 89px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .logo img {
+      background-image: url('./../../../assets/logoColored.svg'); // Update path accordingly
+      width: 184px;
+      height: 33px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+    .actions {
+      // Align icons
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+// Responsive design using mixins
+@include respond-to('small') {
+  .navigation {
+    display: none; // Hide navigation on small screens
+  }
+}

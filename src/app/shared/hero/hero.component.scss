@@ -1,0 +1,92 @@
+@import './../../../assets/_mixins';
+@import './../../../assets/_variables';
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  color: $theme-background;
+  text-align: center;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center;
+    z-index: -1;
+
+    @media (min-width: breakpoint('desktop')) {
+      display: block;
+    }
+
+    @media (max-width: breakpoint('mobile')) {
+      display: none;
+    }
+  }
+
+  .hero-img {
+    width: 400px;
+
+    @media (min-width: breakpoint('desktop')) {
+      display: none;
+    }
+
+    @media (max-width: breakpoint('mobile')) {
+      display: block;
+    }
+  }
+
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: $theme-surface;
+    padding: 2rem 3rem;
+
+    @media (min-width: breakpoint('desktop')) {
+      margin: 4rem 0 4.31rem 6.25rem;
+      width: 37rem;
+      height: 34.5rem;
+    }
+
+    @media (max-width: breakpoint('mobile')) {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  h1 {
+    color: $theme-text-secondary;
+    font-family: "Times New Roman";
+
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+
+    @media (min-width: breakpoint('desktop')) {
+      font-size: 2.625rem;
+    }
+
+    @media (max-width: breakpoint('mobile')) {
+      font-size: 1.625rem;
+    }
+  }
+
+  p {
+    color: $theme-text-dark;
+    text-align: left;
+    font-family: "Helvetica Neue";
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.5rem;
+
+  }
+}

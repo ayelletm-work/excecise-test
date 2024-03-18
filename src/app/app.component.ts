@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeroComponent } from './shared/hero/hero.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { MainComponent } from './shared/main/main.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [FooterComponent, HeroComponent, HeaderComponent, MainComponent]
 })
 export class AppComponent {
-  title = 'excecise-test';
+  title = 'carebox-app';
 }

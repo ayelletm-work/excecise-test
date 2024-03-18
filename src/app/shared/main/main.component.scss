@@ -1,0 +1,11 @@
+
+@import './../../assets/_mixins';
+
+main {
+  section {
+    padding: 2rem;
+    @include respond-to('mobile') {
+      padding: 1rem;
+    }
+  }
+}

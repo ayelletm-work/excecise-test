@@ -1,0 +1,63 @@
+@import './../../../assets/_mixins';
+@import './../../../assets/_variables';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: $theme-footer-background; // Assuming a black background
+    color: #fff;
+    text-align: center;
+    padding-bottom: 2.31rem;
+    padding-top: 2rem;
+
+    .footer-logo,
+    .footer-legal,
+    .footer-nav {
+        width: 33.33%;
+        padding: 1rem 3.69rem;
+        align-items: center;
+        height: 9.25rem;
+
+    }
+
+    .footer-section {
+        border-right: 1px solid $theme-border ;
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+
+        .nav-item {
+            color: $theme-text-light;
+            margin: 4px;
+
+
+            &:hover {
+                color: $theme-text-primary;
+            }
+        }
+    }
+
+    // Styles for non-mobile views
+    @media (min-width: 769px) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+        .footer-legal,
+        .footer-nav {
+            border-bottom: none; // Remove the border for larger screens
+        }
+
+        .footer-nav {
+            flex-direction: row; // Place links horizontally
+            gap: 1rem; // Space between navigation items
+        }
+    }
+}
