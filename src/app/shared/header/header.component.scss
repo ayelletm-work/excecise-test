@@ -1,28 +1,24 @@
 
 @import './../../assets/_mixins';
-// Component styles
+@import './../../assets/_variables';
 header {
   mat-toolbar {
     background: $primary-color;
-
-    .logo img {
+  .logo img {
     height: 50px; // Set the height according to your design
-    }
-    .spacer {
+  .spacer {
       flex: 1 1 auto;
     }
   
     .actions {
     // Align icons
     display: flex;
-      align-items: center;
+    align-items: center;
     button {
       margin-left: 16px; // Space between buttons
-      }
-      }
+    
 }
 }
-
 // Responsive design using mixins
 @include respond-to('small') {
   .navigation {
