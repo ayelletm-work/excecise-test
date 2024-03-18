@@ -3,7 +3,7 @@
 
 .footer {
     display: flex;
-    flex-direction: column;
+
     align-items: center;
     text-align: left;
     padding: 1rem;
@@ -11,9 +11,13 @@
     padding-bottom: 2.31rem;
     background-color: $theme-footer-background; // Replace with actual color variable
     color: $theme-text-light;
-
+    @media (max-width: breakpoint('desktop')) {
+            padding: 1rem 2.88rem;
+            flex-direction: row;
+        }
     @media (max-width: breakpoint('mobile')) {
             padding: 1rem 2.88rem;
+            flex-direction: column;
         }
     .footer-logo,
     .footer-legal,
@@ -31,19 +35,25 @@
             order: 1;
                 height: 8rem;
         }
-                                                                                                                                                                                                                                                                }
+}
+}
 
-                                                                                                                                                                                                                                                                .footer-section {
-                                                                                                                                                                                                                                                                    @media (min-width: breakpoint('desktop')) {
+.footer-section {
+    @media (min-width: breakpoint('desktop')) {
             border-right: 1px solid $theme-border;
             }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @media (max-width: breakpoint('mobile')) {
+@media (max-width: breakpoint('mobile')) {
             border-right: none;
             }
             }
             
             .footer-logo {
+                @media (max-width: breakpoint('desktop')) {
+                        padding: 1rem;
+                        width: 100%;
+                
+                    }
                 @media (max-width: breakpoint('mobile')) {
                     padding: 1rem;
                     width: 100%;
@@ -57,7 +67,16 @@
         gap: 10px;
         justify-content: flex-start;
         align-items: center;
-
+        color: $theme-text-light;
+            margin: 4px;
+        
+            .nav-item {
+                    color: $theme-text-light;
+            
+                    &:hover {
+                        color: $theme-text-primary;
+                    }
+                }
         @media (max-width: breakpoint('mobile')) {
             padding: 1rem;
             margin: 0.25rem;
@@ -65,27 +84,7 @@
                 order: 2;
             border-top: 1px solid $theme-border;
                 border-bottom: 1px solid $theme-border;
-        .nav-item {
-            color: $theme-text-light;
-            margin: 4px;
-
-
-            &:hover {
-                color: $theme-text-primary;
-            }
-                                                .privacy {
-                                                    display: flex;
-                                                        align-items: center;
-                                                        grid-column: span 2;
-                                                        white-space: nowrap;
-                                                    
-                                                        img {
-                                                            margin-left: 0.5rem;
-                                                    
-                                                        }
-                        
-                                                }
-                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+            
 }
+}
+
