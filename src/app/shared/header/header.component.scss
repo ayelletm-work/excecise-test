@@ -1,6 +1,6 @@
 @import './../../../assets/_mixins';
 @import './../../../assets/_variables';
- 
+
 header {mat-toolbar {
   background: $primary-color;
   .logo img {
@@ -9,7 +9,7 @@ header {mat-toolbar {
   .spacer {
     flex: 1 1 auto;
   }
- 
+
   .actions {
     // Align icons
     display: flex;
@@ -19,7 +19,7 @@ header {mat-toolbar {
     }
   }
 }}
- 
+
 // Responsive design using mixins
 @include respond-to('small') {
   .navigation {
