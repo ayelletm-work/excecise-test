@@ -21,11 +21,17 @@ header {
       flex: 1 1 auto;
     }
 
-    .actions {
-      // Align icons
+        .actions {
       display: flex;
       align-items: center;
 
+      @media (min-width: breakpoint('desktop')) {
+          display: block;
+        }
+      
+        @media (max-width: breakpoint('mobile')) {
+          display: none;
+        }
       button {
         margin-left: 16px;
       }
@@ -35,11 +41,4 @@ header {
 
 .example-spacer {
   flex: 1 1 auto;
-}
-
-// Responsive design using mixins
-@include respond-to('small') {
-  .navigation {
-    display: none; // Hide navigation on small screens
-  }
 }
