@@ -1,27 +1,33 @@
+@import './../../../assets/_mixins';
+@import './../../../assets/variables';
 
-@import './../../assets/_mixins';
-@import './../../assets/_variables';
-header {
-  mat-toolbar {
-    background: $primary-color;
+// Component styles
+.custom-toolbar {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 0 100px;
+  height: 89px;
   .logo img {
-    height: 50px; // Set the height according to your design
-  .spacer {
-      flex: 1 1 auto;
+    width: 184px;
+      height: 33px;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
-  
+    
     .actions {
-    // Align icons
     display: flex;
     align-items: center;
+@media (max-width: breakpoint('mobile')) {
+    display: none;
+
+  }
     button {
-      margin-left: 16px; // Space between buttons
-    
-}
-}
-// Responsive design using mixins
-@include respond-to('small') {
-  .navigation {
-    display: none; // Hide navigation on small screens
-  
+      margin-left: 16px;
+      }
+      }
+
+    .example-spacer {
+      flex: 1 1 auto;
+    }
 }
