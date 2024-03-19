@@ -32,10 +32,18 @@
         @media (max-width: breakpoint('mobile')) {
             padding: 1rem;
             width: 100%;
-            order: 1;
+        
                 height: 8rem;
         }
 }
+}
+.footer-legal {
+    @media (min-width: breakpoint('desktop')) {}
+
+    @media (max-width: breakpoint('mobile')) {
+        order: 1;
+    }
+
 }
 
 .footer-section {
@@ -74,7 +82,7 @@
                     color: $theme-text-light;
             
                     &:hover {
-                        color: $theme-text-primary;
+                        color: $theme-border;
                     }
                 }
         @media (max-width: breakpoint('mobile')) {
